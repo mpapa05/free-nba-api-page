@@ -1,1 +1,18 @@
 <p>teams component works</p>
+<ng-container *ngIf="teamsData">
+    <div class="grid grid-cols-4 gap-4">
+        <div class="col-md-4" *ngFor="let team of teamsData.data">
+            <!-- TODO make a card component for teams and pass teams data to it -->
+        <div class="card">
+            <img src="../assets/icons/{{team.abbreviation}}.svg" class="card-img-top" alt="{{team.full_name}}">
+            <div class="card-body">
+                <h5 class="card-title flex items-center justify-center">{{team.full_name}}</h5>
+                <div class="grid grid-rows-2 gap-2">
+                    <a class="btn btn-primary flex items-center justify-center">View Games</a>
+                    <a class="btn btn-primary flex items-center justify-center">View Team</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</ng-container>

@@ -10,7 +10,7 @@ import { environment } from '../../environments/environment';
 
 export class GamesService {
   //TODO cut and paste to another const file where we use environment variables, and because we don't want to repeat code in services
-  readonly apiOptions = {
+  private readonly apiOptions = {
     [environment.xRapidApiKeyKey]: environment.xRapidApiKeyValue,
     [environment.xRapidApiHostKey]: environment.xRapidApiHostValue
   }
